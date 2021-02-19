@@ -5,8 +5,9 @@
 * [Contents](#content)
 
 ## General Info
+Caleb Verma loves beans.
 This browser based web application to ...
-	
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
