@@ -1,5 +1,6 @@
 ## My Web Application (Title)
 Heqian Liu A01253984
+Caleb Verma A01257874
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
