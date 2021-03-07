@@ -21,7 +21,13 @@ h1 {
     width: 100%;
     z-index:300000;
     text-align: center;
-    bottom: 0;
-    
+    bottom: 0;   
 }
-    
+
+#sounds{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 0; 
+    background: transparent;
+}
