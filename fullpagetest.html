@@ -11,16 +11,17 @@
         <div class="content">
             <h1>Beautiful Menus for any Cuisine</h1>
             <p>Mmmmm Delicious</p>
-            <input type="button" value="Sound On" onclick="playMusic()" />
+            <input type="button" value="Sound On" onclick="togglePlay()" />
 
        </div>
         <video autoplay muted loop id="myvid">
-            <source src = "./content/Minucookingreel.mp4" >
-        <audio id='cooking' controls autoplay loop>
-            <source src = "./content/Alcynoos, Parental, Ferdinand Cros _ T-Time - Vague.mp3">
-        </audio>         
-       
+            <source src = "./content/Minucookingreel.mp4" type='video/mp4'" >
+        </video>
+
+        <audio id="myAudio" src="./content/Alcynoos, Parental, Ferdinand Cros _ T-Time - Vague.mp3" preload="auto">
+        </audio>
         
+       
         <script src="./scripts/fullpagetest.js" async defer></script>
     </body>
 </html>

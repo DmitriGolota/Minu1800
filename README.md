@@ -3,6 +3,14 @@ Heqian Liu - A01253984
 Heqian Liu A01253984
 Caleb Verma A01257874
 Dmitri Golota A00941422
+
+## General Notes:
+
+- Add files from https://drive.google.com/drive/folders/1xFvI6S29wOWAVnLjwGqka0VSCsu01BJa?usp=sharing
+    to contents folder.
+
+
+
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Contents](#content)
