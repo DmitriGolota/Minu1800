@@ -8,6 +8,7 @@ Dmitri Golota A00941422
 
 - Add files from https://drive.google.com/drive/folders/1xFvI6S29wOWAVnLjwGqka0VSCsu01BJa?usp=sharing
     to contents folder.
+- Main Page needs to be centered properly, mobile view is not optimal
 
 
 
