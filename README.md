@@ -29,6 +29,9 @@ Technologies used for this project:
 ## Content
 Content of the project folder:
 
+## Links:
+
+Landing Page WireFrame: https://www.figma.com/file/Lmcv8ZFR5hXwpZYTlToUBm/COMP-1800---Team-41?node-id=102%3A2
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
