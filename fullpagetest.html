@@ -51,12 +51,26 @@
             <h1>Beautiful Menus for any Cuisine</h1>
             <p>Mmmmm Delicious</p>
             <div>
+              
                 <button id="sounds" type="submit"  value="On.off" onclick="togglePlay()">
                     <img src="./content/soundpix.webp" width="50" height="40" alt="submit" />
                     </button>
             </div>
             <br>
-            <button id= "start" type="button" class="btn btn-secondary btn-lg">Lets Get Started</button>
+          
+
+              <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Welcome to Minu. Lets get you started with a guided workflow! </p>
+              </div>
+
+            </div>
+
+            <button id= "myBtn" type="button" class="btn btn-primary" data-toggle = "modal" data-target="#exampleM">Lets Get Started</button>
         </div>
 
         <div id = "vid1">
