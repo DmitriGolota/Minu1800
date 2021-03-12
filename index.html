@@ -1,81 +1,170 @@
 <!DOCTYPE html>
+
 <html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-<head>
-    <meta charset="utf-8">
-    <title>My BCIT Project</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
+        <link rel="stylesheet" href="./styles/fullpageteststyles.css">
+    </head>
 
-    <!-- Bootstrap for Mobile-first, and JQuery -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link href="./css/index.css" rel="stylesheet">
-
-
-    <!-- Optional styles and scripts of your own -->
-
-
-</head>
-
-<body>
-
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
-    <!-- Header Navigation Bar -->
-
-    <nav class="navbar navbar-dark bg-primary" style="background-color: #e3f2fd;">
+    <body>
+      <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
+          <a class="navbar-brand" href="#">Minu</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
-            </div>
-        </div>
-    </nav>
-
-    <aside>
-        <div class="card" style="width: 18rem; margin-top: 2rem; margin-left: 10rem;">
-            <div class="card-body">
-              <p class="card-text">You want to make a menu? A MENU? Well, son, you've come to the right place. Minu is a place to get 
-                  your menu fix. Yes. I mean it. Minu is to menus what Disney is to happiness. That being, it creates it. Oh yeah. It's Minu Time.</p>
-              <a href="#" class="btn btn-primary">Get Started</a>
-            </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
           </div>
-    </aside>
+        </div>
+      </nav>
+      <div id = "parent"></div>
+        <div id="content">
+            <h1>Beautiful Menus for any Cuisine</h1>
+            <p>Mmmmm Delicious</p>
+            <div>
+              
+                <button id="sounds" type="submit"  value="On.off" onclick="togglePlay()">
+                    <img src="./content/soundpix.webp" width="50" height="40" alt="submit" />
+                    </button>
+            </div>
+            <br>
+          
 
-    <div id="footer">
-        <span>Minu</span>
-    </div>
+              <!-- The Modal -->
+            <div id="myModal" class="modal">
 
-    <!----------------------------------------------->
-    <!-- JS: Boostrap, Firebase, API related    -->
-    <!----------------------------------------------->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
+              <!-- Modal content -->
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Welcome to Minu. Lets get you started with a guided workflow! </p>
+              </div>
 
-    <!--------------------------------------------------------------------->
-    <!-- JS files: Your own JavaScript functions included here    -->
-    <!--------------------------------------------------------------------->
+            </div>
 
-</body>
+            <button id= "myBtn" type="button" class="btn btn-primary" data-toggle = "modal" data-target="#exampleM">Lets Get Started</button>
+        </div>
 
+        <div id = "vid1">
+          <video autoplay muted loop id="myvid">
+            <source src = "./content/Minucookingreel.mp4" type='video/mp4'" >
+          </video>
+        </div>
+
+      </div>
+
+        <audio id="myAudio" src="./content/Alcynoos, Parental, Ferdinand Cros _ T-Time - Vague.mp3" preload="auto">
+        </audio>
+        
+       
+        <script src="./scripts/fullpagetest.js" async defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    
+              <!-- Site footer -->
+              <footer class="site-footer">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <h6>About</h6>
+                      <p class="text-justify"><strong>Minu</strong> is a web-based application developed by a small team of 
+                      BCIT Term 1 students that allows users to create intuitive menus from a guided workflow. Minu strives to be 
+                    a one-stop-shop for quick menu creation used by a wide variety of restuaurant owners and chefs. </p>
+                    </div>
+          
+                    <div class="col-xs-6 col-md-3">
+                      <h6>Categories</h6>
+                      <ul class="footer-links">
+                        <li><a href="PLACEHOLDER">C</a></li>
+                        <li><a href="PLACEHOLDER">UI Design</a></li>
+                        <li><a href="PLACEHOLDER">PHP</a></li>
+                        <li><a href="PLACEHOLDER">Java</a></li>
+                        <li><a href="PLACEHOLDER">Android</a></li>
+                        <li><a href="PLACEHOLDER">Templates</a></li>
+                      </ul>
+                    </div>
+          
+                    <div class="col-xs-6 col-md-3">
+                      <h6>Quick Links</h6>
+                      <ul class="footer-links">
+                        <li><a href="PLACEHOLDER">About Us</a></li>
+                        <li><a href="PLACEHOLDER">Contact Us</a></li>
+                        <li><a href="PLACEHOLDER">Contribute</a></li>
+                        <li><a href="PLACEHOLDER">Privacy Policy</a></li>
+                        <li><a href="PLACEHOLDER">Sitemap</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                      <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+                   <a href="#">Team Minu</a>.
+                      </p>
+                    </div>
+          
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                      <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </footer>
+
+              <!-- The core Firebase JS SDK is always required and must be listed first -->
+              <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+
+              <!-- TODO: Add SDKs for Firebase products that you want to use
+              https://firebase.google.com/docs/web/setup#available-libraries -->
+
+              <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                  apiKey: "AIzaSyCV6-efUlCaZoXzuD-nnNOd200p5inM6XM",
+                  authDomain: "minu1800-df37c.firebaseapp.com",
+                  projectId: "minu1800-df37c",
+                  storageBucket: "minu1800-df37c.appspot.com",
+                  messagingSenderId: "1001139316928",
+                  appId: "1:1001139316928:web:529f2df9d5341d73296525"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+              </script>
+
+      </body>
 </html>
+
