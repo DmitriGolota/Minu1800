@@ -65,9 +65,10 @@ h1 {
 /* The Close Button */
 .close {
   color: #aaa;
-  float: right;
+  padding-left: 80%;
   font-size: 28px;
   font-weight: bold;
+  right: -10px;
 }
 
 .close:hover,
