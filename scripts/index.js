@@ -1,6 +1,7 @@
 var myAudio = document.getElementById("myAudio");
 var isPlaying = false;
 
+/// Toggle Sound On and Off ///
 function togglePlay() {
   isPlaying ? myAudio.pause() : myAudio.play();
 };
@@ -31,3 +32,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+/// link on button click triggers
+document.getElementById('template').addEventListener('click', function (event) {};
+document.getElementById('guidedworkflow').addEventListener('click', function (event) {};
+document.getElementById('freestyle').addEventListener('click', function (event) {};
