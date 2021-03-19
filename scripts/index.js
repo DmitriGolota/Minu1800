@@ -32,7 +32,18 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+/// profile button ///
+
+
+document.getElementById("profile").addEventListener("click", function(event){
+  window.location = "./login/login.html"
+});
+
+
+
+
 /// link on button click triggers
-document.getElementById('template').addEventListener('click', function (event) {};
-document.getElementById('guidedworkflow').addEventListener('click', function (event) {};
-document.getElementById('freestyle').addEventListener('click', function (event) {};
+//document.getElementById('template').addEventListener('click', function (event) {};
+//document.getElementById('guidedworkflow').addEventListener('click', function (event) {};
+//document.getElementById('freestyle').addEventListener('click', function (event) {};

@@ -38,6 +38,21 @@ h1 {
   align-items: center;
   color: white;
 }
+
+.profileimg{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border-color: rgb(83, 163, 228);
+  border-width: 2px;
+  margin-left: 80%;
+  background-image: url("64096.png");
+  background-size: 100%;
+  z-index: 10;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+
 /* Modal */
 
 .modal {
