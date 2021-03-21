@@ -2,7 +2,9 @@ h1 {
     font-family:cursive;
     background-color: rgba(0, 0, 0, 0.24);
 }
-    
+body {
+  background-color:#26272b ;
+} 
 #myvid {
     position: relative;
     
@@ -11,11 +13,22 @@ h1 {
     top: 0;
     overflow: hidden    
 }
+
+#vid1 {
+  background-color: rgba(0, 17, 255, 0) ;
+}
+.card{
+  background-color: #26272b;
+}
+.card-body {
+  background-color: #26272b ;
+  color: white;
+}
     
 #content {
     position: absolute;
     width: 100%;
-    background: rgba(0, 17, 255, 0);
+    background-color: rgba(0, 17, 255, 0);
     color: #ffffff;
     z-index:9;
     text-align: center;
@@ -38,6 +51,8 @@ h1 {
   align-items: center;
   color: white;
 }
+
+
 
 .profileimg{
   height: 35px;
