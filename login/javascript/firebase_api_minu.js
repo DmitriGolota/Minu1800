@@ -58,3 +58,13 @@ document.getElementById("help-button").addEventListener("click", function(event)
         helpMessage.style.display = "none";
     }
 });
+
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      window.location = "/profile.html"
+    } else {
+      // No user is signed in.
+      window.location = "/login/login.html"
+    }
+  });
