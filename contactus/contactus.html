@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Contact V5</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
@@ -17,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
 
 
@@ -32,14 +34,17 @@
 					<input class="input100" id="contactFormName" type="text" name="name" placeholder="Enter Your Name">
 				</div>
 
-				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100"
+					data-validate="Enter Your Email (e@a.x)">
 					<span class="label-input100">Email *</span>
-					<input class="input100" id="contactFormEmail" type="text" name="email" placeholder="Enter Your Email ">
+					<input class="input100" id="contactFormEmail" type="text" name="email"
+						placeholder="Enter Your Email ">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Phone</span>
-					<input class="input100" id="contactFormPhone" type="text" name="phone" placeholder="Enter Number Phone">
+					<input class="input100" id="contactFormPhone" type="text" name="phone"
+						placeholder="Enter Number Phone">
 				</div>
 
 				<div class="wrap-input100 input100-select bg1">
@@ -57,28 +62,23 @@
 					</div>
 				</div>
 
-				
-
-
-
-				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+				<div class="wrap-input100 validate-input bg0 rs1-alert-validate"
+					data-validate="Please Type Your Message">
 					<span class="label-input100">Message</span>
-					<textarea class="input100" id="contactFormMessage" name="message" placeholder="Your message here..."></textarea>
-				</div>
-
-				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn" id="contactFormSubmit">
-						<span>
-							Submit
-							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
-						</span>
-					</button>
+					<textarea class="input100" id="contactFormMessage" name="message"
+						placeholder="Your message here..."></textarea>
 				</div>
 			</form>
+			<div class="container-contact100-form-btn">
+				<button class="contact100-form-btn" id="contactFormSubmit">
+					<span>
+						Submit
+						<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+					</span>
+				</button>
+			</div>
 		</div>
 	</div>
-
-
 
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/animsition/js/animsition.min.js"></script>
@@ -86,16 +86,16 @@
 	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="vendor/select2/select2.min.js"></script>
 	<script>
-		$(".js-select2").each(function(){
+		$(".js-select2").each(function () {
 			$(this).select2({
 				minimumResultsForSearch: 20,
 				dropdownParent: $(this).next('.dropDownSelect2')
 			});
 
 
-			$(".js-select2").each(function(){
-				$(this).on('select2:close', function (e){
-					if($(this).val() == "Please chooses") {
+			$(".js-select2").each(function () {
+				$(this).on('select2:close', function (e) {
+					if ($(this).val() == "Please chooses") {
 						$('.js-show-service').slideUp();
 					}
 					else {
@@ -111,54 +111,43 @@
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 	<script src="vendor/noui/nouislider.min.js"></script>
 	<script>
-	    var filterBar = document.getElementById('filter-bar');
+		var filterBar = document.getElementById('filter-bar');
 
-	    noUiSlider.create(filterBar, {
-	        start: [ 1500, 3900 ],
-	        connect: true,
-	        range: {
-	            'min': 1500,
-	            'max': 7500
-	        }
-	    });
+		noUiSlider.create(filterBar, {
+			start: [1500, 3900],
+			connect: true,
+			range: {
+				'min': 1500,
+				'max': 7500
+			}
+		});
 
-	    var skipValues = [
-	    document.getElementById('value-lower'),
-	    document.getElementById('value-upper')
-	    ];
+		var skipValues = [
+			document.getElementById('value-lower'),
+			document.getElementById('value-upper')
+		];
 
-	    filterBar.noUiSlider.on('update', function( values, handle ) {
-	        skipValues[handle].innerHTML = Math.round(values[handle]);
-	        $('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
-	        $('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
-	    });
+		filterBar.noUiSlider.on('update', function (values, handle) {
+			skipValues[handle].innerHTML = Math.round(values[handle]);
+			$('.contact100-form-range-value input[name="from-value"]').val($('#value-lower').html());
+			$('.contact100-form-range-value input[name="to-value"]').val($('#value-upper').html());
+		});
 	</script>
-<!--===============================================================================================-->
-	<!-- <script src="js/main.js"></script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Firebase -->
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
 
-  gtag('config', 'UA-23581568-13');
-</script>
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
 
-<!-- Firebase -->
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+	<!-- Firebase UI Authentication Library -->
+	<script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
-
-    <!-- Firebase UI Authentication Library -->
-    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-
-    <!-- Link to Firestore (i think?); Connect this to all Minu pages to keep track of all data -->
-	<script src="/contactus/firebase/firebase_api_contact_form.js"></script>
+	<!-- Link to Firestore (i think?); Connect this to all Minu pages to keep track of all data -->
+	<script src="./firebase/firebase_api_contact_form.js"></script>
 
 </body>
+
 </html>
