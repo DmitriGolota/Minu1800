@@ -29,23 +29,23 @@
 
 				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
 					<span class="label-input100">FULL NAME *</span>
-					<input class="input100" type="text" name="name" placeholder="Enter Your Name">
+					<input class="input100" id="contactFormName" type="text" name="name" placeholder="Enter Your Name">
 				</div>
 
 				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
 					<span class="label-input100">Email *</span>
-					<input class="input100" type="text" name="email" placeholder="Enter Your Email ">
+					<input class="input100" id="contactFormEmail" type="text" name="email" placeholder="Enter Your Email ">
 				</div>
 
 				<div class="wrap-input100 bg1 rs1-wrap-input100">
 					<span class="label-input100">Phone</span>
-					<input class="input100" type="text" name="phone" placeholder="Enter Number Phone">
+					<input class="input100" id="contactFormPhone" type="text" name="phone" placeholder="Enter Number Phone">
 				</div>
 
 				<div class="wrap-input100 input100-select bg1">
 					<span class="label-input100">What can we help you with? *</span>
 					<div>
-						<select class="js-select2" name="service">
+						<select class="js-select2" id="contactFormIssue" name="service">
 							<option>Please choose one of the following</option>
 							<option>Account</option>
 							<option>Templates</option>
@@ -63,11 +63,11 @@
 
 				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
 					<span class="label-input100">Message</span>
-					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+					<textarea class="input100" id="contactFormMessage" name="message" placeholder="Your message here..."></textarea>
 				</div>
 
 				<div class="container-contact100-form-btn">
-					<button class="contact100-form-btn">
+					<button class="contact100-form-btn" id="contactFormSubmit">
 						<span>
 							Submit
 							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
@@ -145,6 +145,20 @@
 
   gtag('config', 'UA-23581568-13');
 </script>
+
+<!-- Firebase -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
+
+    <!-- Firebase UI Authentication Library -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+
+    <!-- Link to Firestore (i think?); Connect this to all Minu pages to keep track of all data -->
+	<script src="/contactus/firebase/firebase_api_contact_form.js"></script>
 
 </body>
 </html>
