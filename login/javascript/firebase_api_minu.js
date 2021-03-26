@@ -6,7 +6,7 @@ var firebaseConfig = {
     storageBucket: "minu1800-df37c.appspot.com",
     messagingSenderId: "1001139316928",
     appId: "1:1001139316928:web:529f2df9d5341d73296525"
-  };
+};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
@@ -53,7 +53,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: './profile.html',
+    signInSuccessUrl: '../profile.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
