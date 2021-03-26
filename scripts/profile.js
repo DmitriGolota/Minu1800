@@ -37,21 +37,18 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-// write name to name field from user db
-// function writeName(){
-//     firebase.auth().onAuthStateChanged(function(somebody){
-//         if(somebody){
-//             console.log(somebody.uid);
-//             db.collection("users")
-//             .doc(somebody.uid)
-//             .get()
-//             .then(function(doc){
-//                 console.log(doc.data().name);
-//                 var n = doc.data().name;
-
-//                 $(".name-from-db").text(n)
-//             })
-//         }
-//     })
-// }
-// writeName();
+firebase.auth().onAuthStateChanged(function (somebody) {
+    if (somebody) {
+        console.log(somebody.uid);
+        db.collection("users")
+            .doc(somebody.uid)
+            .get()
+            .then(function (doc) {
+                console.log(doc.data());
+                document.getElementById('name-from-db').innerHTML = doc.data().name;
+                document.getElementById('email-from-db').innerHTML = doc.data().email;
+                document.getElementById('business-from-db').innerHTML = doc.data().business;
+                document.getElementById('tel-from-db').innerHTML = doc.data().tel;
+            })
+    }
+})
