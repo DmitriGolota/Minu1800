@@ -61,7 +61,7 @@ body {
   border-color: rgb(83, 163, 228);
   border-width: 2px;
   margin-left: 80%;
-  background-image: url("/images/64096.png");
+  background-image: url("../images/64096.png");
   background-size: 100%;
   z-index: 10;
   background-color: rgba(255, 0, 0, 0);
