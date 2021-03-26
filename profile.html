@@ -23,6 +23,7 @@
             <a class="navbar-brand" href="#">Minu Dashboard</a>
         </div>
     </nav>
+    <button id="newmenu">Create New Menu</button>
 
     <div id="wrapper">
         <div id="menus">
@@ -101,36 +102,56 @@
             <div class="mb-3">
                 <label for="userInput" class="form-label">Name: </label>
                 <br>
-                <span id = "name-from-db">Josh Smith</span>
+                <span id="name-from-db">
+                    <div class="spinner-border text-minu-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </span>
                 <i class="far fa-edit editbtns" id="edit-name"></i>
             </div>
             <div class="mb-3">
                 <label for="emailInput" class="form-label">Email address: </label>
                 <br>
-                <span>Example@example.com</span>
+                <span id="email-from-db">
+                    <div class="spinner-border text-minu-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </span>
                 <i class="far fa-edit editbtns" id="edit-email"></i>
             </div>
             <div class="mb-3">
                 <label for="bus-name" class="form-label">Business Name: </label>
                 <br>
-                <span>Pizza Glory</span>
+                <span id="business-from-db">
+                    <div class="spinner-border text-minu-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </span>
                 <i class="far fa-edit editbtns" id="edit-business"></i>
             </div>
             <div class="mb-3">
                 <label for="tele" class="form-label">Tel: </label>
                 <br>
-                <span>800-808-800</span>
+                <span id="tel-from-db">
+                    <div class="spinner-border text-minu-primary" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </span>
                 <i class="far fa-edit editbtns" id="edit-tel"></i>
             </div>
         </div>
     </div>
 
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
 
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-firestore.js"></script>
 
+    <!-- Firebase UI Authentication Library -->
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-    
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
@@ -142,6 +163,7 @@
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
     <script src="./scripts/profile.js"></script>
+    <script src="test_script_generate_menu.js"></script>
     <script src="https://kit.fontawesome.com/d30f395b98.js" crossorigin="anonymous"></script>
 </body>
 
