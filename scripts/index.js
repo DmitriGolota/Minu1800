@@ -37,7 +37,7 @@ window.onclick = function(event) {
 
 
 document.getElementById("profile").addEventListener("click", function(event){
-      window.location = "./login/login.html"
+      window.location = "./login.html"
 });
 
 

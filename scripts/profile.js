@@ -28,20 +28,20 @@ function editBusiness() {
 // const db = firebase.firestore();
 
 // write name to name field from user db
-function writeName(){
-    firebase.auth().onAuthStateChanged(function(somebody){
-        if(somebody){
-            console.log(somebody.uid);
-            db.collection("users")
-            .doc(somebody.uid)
-            .get()
-            .then(function(doc){
-                console.log(doc.data().name);
-                var n = doc.data().name;
+// function writeName(){
+//     firebase.auth().onAuthStateChanged(function(somebody){
+//         if(somebody){
+//             console.log(somebody.uid);
+//             db.collection("users")
+//             .doc(somebody.uid)
+//             .get()
+//             .then(function(doc){
+//                 console.log(doc.data().name);
+//                 var n = doc.data().name;
 
-                $(".name-from-db").text(n)
-            })
-        }
-    })
-}
-writeName();
+//                 $(".name-from-db").text(n)
+//             })
+//         }
+//     })
+// }
+// writeName();
