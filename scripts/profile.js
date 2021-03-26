@@ -24,8 +24,18 @@ function editEmail() {
 function editBusiness() {
     prompt("Please enter your business name");
 }
-// firebase.initializeApp(firebaseConfig);
-// const db = firebase.firestore();
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCV6-efUlCaZoXzuD-nnNOd200p5inM6XM",
+    authDomain: "minu1800-df37c.firebaseapp.com",
+    projectId: "minu1800-df37c",
+    storageBucket: "minu1800-df37c.appspot.com",
+    messagingSenderId: "1001139316928",
+    appId: "1:1001139316928:web:529f2df9d5341d73296525"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 // write name to name field from user db
  function writeName(){
