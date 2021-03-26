@@ -24,6 +24,8 @@ function editEmail() {
 function editBusiness() {
     prompt("Please enter your business name");
 }
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
 // write name to name field from user db
 function writeName(){
@@ -37,7 +39,7 @@ function writeName(){
                 console.log(doc.data().name);
                 var n = doc.data().name;
 
-                $("#name-from-db").text(n)
+                $(".name-from-db").text(n)
             })
         }
     })
