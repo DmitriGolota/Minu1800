@@ -1,12 +1,13 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyCV6-efUlCaZoXzuD-nnNOd200p5inM6XM",
-    authDomain: "calebmarch02demo.firebaseapp.com",
-    projectId: "calebmarch02demo",
-    storageBucket: "calebmarch02demo.appspot.com",
-    messagingSenderId: "824313031068",
-    appId: "1:824313031068:web:b84179c930cc8e57c00059"
-};
+    authDomain: "minu1800-df37c.firebaseapp.com",
+    projectId: "minu1800-df37c",
+    storageBucket: "minu1800-df37c.appspot.com",
+    messagingSenderId: "1001139316928",
+    appId: "1:1001139316928:web:529f2df9d5341d73296525"
+  };
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();

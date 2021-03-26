@@ -65,8 +65,6 @@
     <script src='./javascript/firebase_api_minu.js'></script>
     <script>
          // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-        const db = firebase.firestore();
         var uiConfig = {
             callbacks: {
                 signInSuccessWithAuthResult: function (authResult, redirectUrl) {
