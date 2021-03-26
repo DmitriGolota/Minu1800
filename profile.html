@@ -18,59 +18,116 @@
 </head>
 
 <body>
-    <!-------------------------------------->
-    <!-- The following is HTML for layout -->
-    <!-------------------------------------->
-    <!-- Header Navigation Bar -->
-    <nav class="navbar navbar-dark bg-primary" style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="navbar-brand" href="#">Minu Dashboard</a>
         </div>
     </nav>
 
-    <div class="card">
-        <form>
+    <div id="wrapper">
+        <div id="menus">
+            <h4 class="sub-titles">Menu List</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col" colspan="2">Menu Name</th>
+                        <th scope="col">Last Edited</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-rows">
+                        <th scope="row">1</th>
+                        <td colspan="2">Test Menu 1</td>
+                        <td>2021/03/20</td>
+                        <td>
+                            <div class="actions">
+                                <i class="far fa-edit"></i>
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-rows">
+                        <th scope="row">2</th>
+                        <td colspan="2">Test Menu 2</td>
+                        <td>2021/03/20</td>
+                        <td>
+                            <div class="actions">
+                                <i class="far fa-edit"></i>
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-rows">
+                        <th scope="row">3</th>
+                        <td colspan="2">Test Menu 3</td>
+                        <td>2021/03/20</td>
+                        <td>
+                            <div class="actions">
+                                <i class="far fa-edit"></i>
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-rows">
+                        <th scope="row">4</th>
+                        <td colspan="2">Test Menu 4</td>
+                        <td>2021/03/20</td>
+                        <td>
+                            <div class="actions">
+                                <i class="far fa-edit"></i>
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-rows">
+                        <th scope="row">5</th>
+                        <td colspan="2">Test Menu 5</td>
+                        <td>2021/03/20</td>
+                        <td>
+                            <div class="actions">
+                                <i class="far fa-edit"></i>
+                                <i class="far fa-trash-alt"></i>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="infos">
+            <h4 class="sub-titles">Personal Infos</h4>
             <div class="mb-3">
-                <label for="userInput" class="form-label">Username: </label>
+                <label for="userInput" class="form-label">Name: </label>
+                <br>
                 <span>Josh Smith</span>
-                <button id="editUsername">Edit</button>
+                <i class="far fa-edit editbtns" id="edit-name"></i>
             </div>
             <div class="mb-3">
                 <label for="emailInput" class="form-label">Email address: </label>
+                <br>
                 <span>Example@example.com</span>
-                <button id="editEmail">Edit</button>
+                <i class="far fa-edit editbtns" id="edit-email"></i>
             </div>
             <div class="mb-3">
-                <label for="password" class="form-label">Password: </label>
-                <button id="editPassword">Edit</button>
+                <label for="bus-name" class="form-label">Business Name: </label>
+                <br>
+                <span>Pizza Glory</span>
+                <i class="far fa-edit editbtns" id="edit-business"></i>
             </div>
             <div class="mb-3">
-                <label class="form-label" for="avatar">Avatar: </label>
-                <input type="file"><br>
-                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="ava" id="avatar">
+                <label for="tele" class="form-label">Tel: </label>
+                <br>
+                <span>800-808-800</span>
+                <i class="far fa-edit editbtns" id="edit-tel"></i>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
     </div>
+
+
+
+
 
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
@@ -83,6 +140,7 @@
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
     <script src="./scripts/profile.js"></script>
+    <script src="https://kit.fontawesome.com/d30f395b98.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

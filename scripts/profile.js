@@ -1,20 +1,27 @@
-let usernameBtn = document.getElementById('editUsername');
-let passwordBtn = document.getElementById('editPassword');
-let emailBtn = document.getElementById('editEmail');
+let editNameBtn = document.getElementById('edit-name');
+let editTelBtn = document.getElementById('edit-tel');
+let editBusinessBtn = document.getElementById('edit-business');
+let editEmailBtn = document.getElementById('edit-email');
 
-usernameBtn.addEventListener("click", editUsername);
-passwordBtn.addEventListener("click", editPassword);
-emailBtn.addEventListener("click", editEmail);
 
-function editUsername() {
-    prompt("Please enter a new username");
+editNameBtn.addEventListener("click", editName);
+editTelBtn.addEventListener("click", editTel);
+editBusinessBtn.addEventListener("click", editBusiness);
+editEmailBtn.addEventListener("click", editEmail);
+
+function editName() {
+    prompt("Please enter your name");
 }
 
-function editPassword() {
-    prompt("Please enter a new password");
+function editTel() {
+    prompt("Please enter a telephone number");
 }
 
 function editEmail() {
     prompt("Please enter a new email");
+}
+
+function editBusiness() {
+    prompt("Please enter your business name");
 }
 
