@@ -55,12 +55,13 @@ body {
 
 
 .profileimg{
+  position: inherit;
   height: 35px;
   width: 35px;
   border-radius: 50%;
   border-color: rgb(83, 163, 228);
   border-width: 2px;
-  margin-left: 80%;
+  margin-left: 85%;
   background-image: url("../images/64096.png");
   background-size: 100%;
   z-index: 10;
