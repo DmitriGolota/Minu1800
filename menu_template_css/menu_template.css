@@ -1,17 +1,17 @@
-.menu-background {
+.menu {
     margin: 15px auto;
     width: 600px;
-    height: 900px;
     border: solid 5px black;
 }
 
 .restaurant-name {
     text-align: right;
     font-size: 1.9rem;
-    margin-top: 30%;
+    margin-top: 5%;
     margin-right: 5%;
     margin-left: 10%;
-    padding: 2%;
+    margin-bottom: 3%;
+    padding: 1%;
     border: solid 5px black;
 }
 
