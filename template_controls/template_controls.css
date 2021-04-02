@@ -1,0 +1,142 @@
+body {
+    padding: 30px;
+}
+
+.controls-wrapper{
+    border: 1px black solid;
+    height: 700px;
+    width: 300px;
+    padding: 15px 20px;
+    overflow-y: scroll;
+}
+
+.bg-control {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.color-circles {
+    width: 40px;
+    height: 40px;
+    border-radius: 21px;
+    display: inline-block;
+    border: 2px solid darkgrey;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.color-circles:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.bg-teal {
+    background-color: teal;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-gold {
+    background-color: gold;
+}
+
+.bg-grey {
+    background-color: darkgrey;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-azure {
+    background-color: azure;
+}
+
+.bg-lemon {
+    background-color: lemonchiffon;
+}
+
+.bg-coral {
+    background-color: lightcoral;
+}
+
+.bg-salmon {
+    background-color: lightsalmon;
+}
+
+.bg-coral {
+    background-color: lightcoral;
+}
+
+.bg-sky {
+    background-color: lightskyblue;
+}
+
+.bg-cyan {
+    background-color: lightcyan;
+}
+
+.bg-chocolate {
+    background-color: chocolate;
+}
+
+.minu-success {
+    background-color: #28527a;
+    color: white;
+}
+
+.minu-primary {
+    background-color: #28527a;
+    color: white;
+}
+
+.border-box {
+    height: 50px;
+    padding-top: 10px;
+    width: 100px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.border-box:hover {
+    transform: scale(1.1);
+}
+
+.border-dotted {
+    border: 1px dotted black;
+}
+
+.border-solid {
+    border: 1px solid black;
+}
+
+.border-dotted-thick {
+    border: 3px dotted black;
+}
+
+.border-solid-thick {
+    border: 3px solid black;
+}
+
+#addDishBtn {
+    float: right;
+    clear: both
+}
+
+#dishes-wrapper {
+    margin-bottom: 25px;
+}
+
+#apply-change-btn {
+    margin-top: 20px;
+}
+
+.circle_selected {
+    border: 3px solid lightgreen;
+}
