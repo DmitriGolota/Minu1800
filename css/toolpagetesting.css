@@ -29,3 +29,34 @@ body{
     top: 0px;
 
 }
+.colorbutton {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+  }
+
+#red {
+    background-color: #7c0e00;
+    bottom: 70px;
+    left: 10px;
+}
+#blue {
+    background-color: #03b1eb;
+    bottom: 70px;
+    left: 80px;
+}
+#yellow {
+    background-color: #ecf75b;
+    bottom: 70px;
+    left: 150px;
+}
+#orange {
+    background-color: #b47b00;
+    bottom: 70px;
+    left: 220px;
+}
+#green{
+    background-color: #0f7202;
+    bottom: 70px;
+    left: 290px;
+} 
