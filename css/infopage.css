@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(107, 97, 107);
+    color: black;
+    text-align: center;
+}
+article {
+    text-align: justify;
+    margin: 20px 40px 20px 40px;
+    }
