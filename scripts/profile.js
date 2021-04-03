@@ -81,7 +81,21 @@ firebase.auth().onAuthStateChanged(function (somebody) {
     }
 });
 
-// Login Button
-document.getElementById("profile").addEventListener("click", function(event){
-    window.location = "./login.html"
-});
+// Welcome message
+function sayHello() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+            // User is signed in.
+            // Do something for the user here. 
+            db.collection("users").doc(user.uid)
+                .get()
+                .then(function (doc) {
+                    var n = doc.data().name;
+                    document.getElementById("welcome-message").innerText = n;
+                })
+        } else {
+            // No user is signed in.
+        }
+    });
+}
+sayHello();

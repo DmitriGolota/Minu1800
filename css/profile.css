@@ -12,6 +12,19 @@
     height: 100%;
 }
 
+#menus > h2 {
+    margin-bottom: 30px;
+}
+
+#menus > h4 {
+    float: left;
+    margin-right: 40px;
+}
+
+#newmenu {
+    margin-top: -5px;
+}
+
 #infos {
     flex: 0.4;
     padding: 20px 20px 20px 40px;
