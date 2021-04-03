@@ -80,3 +80,8 @@ firebase.auth().onAuthStateChanged(function (somebody) {
             })
     }
 });
+
+// Login Button
+document.getElementById("profile").addEventListener("click", function(event){
+    window.location = "./login.html"
+});
