@@ -15,7 +15,16 @@ body{
   text-align: center;
   
 }
-
+h2{
+    display: block;
+}
+#goleft{
+    position: absolute;
+    float: right;
+}
+#titleblock{
+    position: absolute;
+}
 #menubody{
     height: 800px;
     width: 100%;
