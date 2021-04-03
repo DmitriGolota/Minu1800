@@ -14,7 +14,14 @@
     <link href="./css/profile.css" rel="stylesheet">
     <!-- Optional styles and scripts of your own -->
 
-
+    <!--Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -22,102 +29,102 @@
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Minu</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Create Your Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="profile.html">User Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contactus/contactus.html">Contact Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Create Your Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">User Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contactus/contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <div id="wrapper">
         <div id="menus">
             <h2>Welcome, <span id="welcome-message">user</span>.</h3>
-            <h4 class="sub-titles">Menu List</h4>
-            <button type="button" class="btn btn-success" id="newmenu">CREATE NEW MENU</button>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col" colspan="2">Menu Name</th>
-                        <th scope="col">Last Edited</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-rows">
-                        <th scope="row">1</th>
-                        <td colspan="2">Test Menu 1</td>
-                        <td>2021/03/20</td>
-                        <td>
-                            <div class="actions">
-                                <i class="far fa-edit"></i>
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="table-rows">
-                        <th scope="row">2</th>
-                        <td colspan="2">Test Menu 2</td>
-                        <td>2021/03/20</td>
-                        <td>
-                            <div class="actions">
-                                <i class="far fa-edit"></i>
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="table-rows">
-                        <th scope="row">3</th>
-                        <td colspan="2">Test Menu 3</td>
-                        <td>2021/03/20</td>
-                        <td>
-                            <div class="actions">
-                                <i class="far fa-edit"></i>
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="table-rows">
-                        <th scope="row">4</th>
-                        <td colspan="2">Test Menu 4</td>
-                        <td>2021/03/20</td>
-                        <td>
-                            <div class="actions">
-                                <i class="far fa-edit"></i>
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr class="table-rows">
-                        <th scope="row">5</th>
-                        <td colspan="2">Test Menu 5</td>
-                        <td>2021/03/20</td>
-                        <td>
-                            <div class="actions">
-                                <i class="far fa-edit"></i>
-                                <i class="far fa-trash-alt"></i>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                <h4 class="sub-titles">Menu List</h4>
+                <button type="button" class="btn btn-success" id="newmenu">CREATE NEW MENU</button>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col" colspan="2">Menu Name</th>
+                            <th scope="col">Last Edited</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-rows">
+                            <th scope="row">1</th>
+                            <td colspan="2">Test Menu 1</td>
+                            <td>2021/03/20</td>
+                            <td>
+                                <div class="actions">
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-rows">
+                            <th scope="row">2</th>
+                            <td colspan="2">Test Menu 2</td>
+                            <td>2021/03/20</td>
+                            <td>
+                                <div class="actions">
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-rows">
+                            <th scope="row">3</th>
+                            <td colspan="2">Test Menu 3</td>
+                            <td>2021/03/20</td>
+                            <td>
+                                <div class="actions">
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-rows">
+                            <th scope="row">4</th>
+                            <td colspan="2">Test Menu 4</td>
+                            <td>2021/03/20</td>
+                            <td>
+                                <div class="actions">
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="table-rows">
+                            <th scope="row">5</th>
+                            <td colspan="2">Test Menu 5</td>
+                            <td>2021/03/20</td>
+                            <td>
+                                <div class="actions">
+                                    <i class="far fa-edit"></i>
+                                    <i class="far fa-trash-alt"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
         </div>
 
         <div id="infos">
