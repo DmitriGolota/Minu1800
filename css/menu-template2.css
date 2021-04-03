@@ -1,46 +1,22 @@
 /* Entire menu as a div*/
-#menuencapsulated{
+.menu{
     position: relative;
-    height: 1000px;
+    width: 600px;
+    height: 800px;
     text-align: center;
     width: 50%;
     margin: 0 auto;
-
+    border: solid 5px black;
 }
 
-#border{
-    height: 900px; 
-    width: 600px; 
-    
+.restaurant-name {
+    margin-bottom: 50px;
 }
 
-/* Menu Elements */
-#menutitle{
-    position: absolute;
-    top: 10%;
-    left: 45%;
+.course * {
+    margin: 10px;
+}
 
-}
-#sectiontitle{
-    position: absolute;
-    top: 25%;
-    left: 45%;
-}
 .separator {
-    position: absolute;
-    top: 30%;
-    left: 37%;
-    width: 200px;
-} 
-
-.item{
-    position:absolute;
-    top: 35%;
-    left: 35%;
-
-}
-.price{
-    position:absolute;
-    top: 35%;
-    left: 65%;  
+    width: 400px;
 }
