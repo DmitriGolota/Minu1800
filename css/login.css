@@ -18,43 +18,9 @@
     margin-bottom: 40px;
 }
 
-#help-button-container {
-    position: absolute;
-    bottom: 20px;
-    right: 25px;
-}
-
-#help-button {
-    text-align: center;
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    border: none;
-    background-color: #C4C4C4;
-    top: 0;
-    left: 0;
-
-}
-
-#help-button:hover {
-    background-color: #949494;
-}
-
-#help-message-container {
-    background-color: #EBEBEB;
-    position: absolute;
-    bottom: 20px;
-    right: 70px;
-    height: 150px;
-    width: 140px;
-    border-radius: 10px;
-    display: none;
-}
-
-#help-message {
-    padding: 10px 10px;
-}
-
+#navbar {
+    background-color: #6d72c3 !important;
+}  
 
 @media screen and (max-width: 400px) {
     #firebaseui-auth-container {
