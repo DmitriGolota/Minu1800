@@ -24,7 +24,7 @@ transition: .4s;
 }
 
 input:checked + .slider {
-background-color: red;
+background-color: #6d72c3;
 }
 
 input:checked + .slider:before {

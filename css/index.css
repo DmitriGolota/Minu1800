@@ -21,7 +21,7 @@ body {
   background-color: #26272b;
 }
 .card-body {
-  background-color: #26272b ;
+  background-color: #26272b;
   color: white;
 }
     
@@ -33,7 +33,6 @@ body {
     z-index:9;
     text-align: center;
     margin-top: 25%;
-      
 }
 
 #sounds{
@@ -59,6 +58,13 @@ body {
   margin-left: 80%;
 }
 
+#navbar {
+  background-color: #6d72c3 !important;
+}
+
+#myBtn {
+  background-color: #6d72c3 !important;
+}
 
 /* Modal */
 
