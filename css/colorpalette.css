@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: #f7f5f6 !important;
+    background-color: #303030 !important;
 }
 
 .main-text {
@@ -38,5 +38,5 @@ body {
 /* For login window buttons */
 #firebaseui-auth-container button {
     color: white;
-    background-color: #CC0300;
+    background-color: #706c70;
 }
