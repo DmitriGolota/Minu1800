@@ -56,6 +56,9 @@ body {
 #profile{
   position: inherit;
   margin-left: 80%;
+  background-color: #5e5069 !important;
+  border-color:  #624772 !important;
+  color: white !important;
 }
 
 /* Modal */

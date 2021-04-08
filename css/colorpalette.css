@@ -7,12 +7,12 @@
 
 /* Should be same colour as main-background */
 .secondary-button {
-    background-color: #CC0300 !important;
-    border-color:  #CC0300 !important;
+    background-color: #5e5069 !important;
+    border-color:  #624772 !important;
 }
 
 .main-background {
-    background-color: #CC0300 !important;
+    background-image: linear-gradient(to bottom right, rgb(149, 125, 163), rgb(60, 27, 70)) !important;
 }
 
 body {

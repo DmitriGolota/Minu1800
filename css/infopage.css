@@ -3,7 +3,7 @@ html{
 }
 
 body{
-    background-image: linear-gradient(to bottom right, rgb(194, 151, 151), rgb(87, 39, 102));
+    background-image: linear-gradient(to bottom, rgb(112, 103, 117), rgb(49, 35, 53)) !important;
     color: black;
     text-align: center;
 }
