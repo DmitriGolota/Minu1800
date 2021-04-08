@@ -6,10 +6,11 @@
   <meta charset="utf-8">
   <title>Minu</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+  <!-- Optional styles of your own -->
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/slider.css">
+  <link rel="stylesheet" href="./css/colorpalette.css">
 
   <!--Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -21,12 +22,12 @@
   <meta name="theme-color" content="#ffffff">
 </head>
 
-<body class="main-background">
-  <nav class="navbar navbar-dark bg-dark" id="navbar">
+<body>
+  <nav class="navbar navbar-dark bg-dark main-background">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Minu</a>
-        
-      <button type="button" class="btn btn-light" id="profile">Log In</button>
+
+      <button type="button" class="btn btn-primary main-button" id="profile">Log In</button>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,36 +35,26 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Create Your Menu</a>
+            <a class="nav-link main-link" href="#">Create Your Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="profile.html">User Profile</a>
+            <a class="nav-link main-link" href="profile.html">User Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./contactus/contactus.html">Contact Us</a>
+            <a class="nav-link main-link" href="./contactus/contactus.html">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link main-link" href="about.html">About Us</a>
           </li>
         </ul>
       </div>
     </div>
-    
   </nav>
-
-  <div id="switch-container">
-    <h5 class="changeable-text" id="switch-label">Theme</h5>
-    <!-- Rounded switch -->
-    <label class="switch">
-      <input type="checkbox" id="slider">
-      <span class="slider round"></span>
-    </label>
-  </div>
 
   <div id="parent"></div>
   <div id="content">
-    <h1 class="changeable-text">Beautiful Menus for any Cuisine</h1>
-    <p class="changeable-text">Mmmmm Delicious</p>
+    <h1 class="main-text">Beautiful Menus for any Cuisine</h1>
+    <p class="main-text">Mmmmm Delicious</p>
     <div>
 
       <button id="sounds" type="submit" value="On.off" onclick="togglePlay()">
@@ -73,7 +64,7 @@
     <br>
 
 
-    <button id="myBtn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleM">Lets Get
+    <button id="myBtn" type="button" class="btn btn-primary main-button" data-toggle="modal" data-target="#exampleM">Lets Get
       Started</button>
   </div>
 
@@ -92,11 +83,11 @@
 
   <div class="card main-background">
     <div class="card-body main-background">
-      <h5 class="card-title changeable-text">Templates and Guided Workflows</h5>
-      <p class="card-text changeable-text">Ever want to make your very own menu with an easy step by step guided process
+      <h5 class="card-title main-text">Templates and Guided Workflows</h5>
+      <p class="card-text main-text">Ever want to make your very own menu with an easy step by step guided process
         to
         beautiful designs?</p>
-      <p class="card-text"><small class="text-muted">Find out by clicking get started now!</small></p>
+      <p class="card-text"><small class="secondary-text">Find out by clicking get started now!</small></p>
     </div>
     <img src="./media/cardimage1.png" class="card-img-bottom" alt="...">
   </div>
@@ -106,27 +97,27 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6">
-          <h6 class="changeable-text">About</h6>
-          <p class="text-justify"><strong>Minu</strong> is a web-based application developed by a small team of
+          <h6 class="main-text">About</h6>
+          <p class="secondary-text"><strong>Minu</strong> is a web-based application developed by a small team of
             BCIT Term 1 students that allows users to create intuitive menus from a guided workflow. Minu strives to
             be
             a one-stop-shop for quick menu creation used by a wide variety of restaurant owners and chefs. </p>
         </div>
 
         <div class="col-xs-6 col-md-3">
-          <h6 class="changeable-text">Categories</h6>
+          <h6 class="main-text">Categories</h6>
           <ul class="footer-links">
-            <li><a href="./infopage.html">Guided Workflow</a></li>
-            <li><a href="./infopage.html">Seemless Design Principles</a></li>
-            <li><a href="./infopage.html">Idea behind Minu</a></li>
+            <li><a href="./infopage.html" class="main-link">Guided Workflow</a></li>
+            <li><a href="./infopage.html" class="main-link">Seemless Design Principles</a></li>
+            <li><a href="./infopage.html" class="main-link">Idea behind Minu</a></li>
           </ul>
         </div>
 
         <div class="col-xs-6 col-md-3">
-          <h6 class="changeable-text">Quick Links</h6>
+          <h6 class="main-text">Quick Links</h6>
           <ul class="footer-links">
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./contactus/contactus.html">Contact Us</a></li>
+            <li><a href="./about.html" class="main-link">About Us</a></li>
+            <li><a href="./contactus/contactus.html" class="main-link">Contact Us</a></li>
           </ul>
         </div>
       </div>
@@ -135,8 +126,8 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 col-sm-6 col-xs-12">
-          <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
-            <a href="./about.html">Team Minu</a>.
+          <p class="secondary-text">Copyright &copy; 2021 All Rights Reserved by
+            <a href="./about.html" class="main-link">Team Minu</a>.
           </p>
         </div>
       </div>
@@ -145,7 +136,6 @@
 
 
   <script src="./scripts/index.js" async defer></script>
-  <script src="./scripts/slider.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
     crossorigin="anonymous"></script>

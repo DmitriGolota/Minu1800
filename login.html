@@ -15,8 +15,9 @@
     <!-- Firebase CSS-->
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
 
+    <!-- Optional styles of your own -->
     <link rel="stylesheet" href="./css/login.css">
-    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/colorpalette.css">
 
     <!--Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -28,8 +29,8 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 
-<body id="body" class="main-background">
-    <nav class="navbar navbar-dark bg-dark" id="navbar">
+<body id="body">
+    <nav class="navbar navbar-dark bg-dark main-background" id="navbar">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Minu</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,34 +41,25 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Create Your Menu</a>
+                        <a class="nav-link main-link" href="#">Create Your Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="profile.html">User Profile</a>
+                        <a class="nav-link main-link" href="profile.html">User Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contactus/contactus.html">Contact Us</a>
+                        <a class="nav-link main-link" href="./contactus/contactus.html">Contact Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link main-link" href="about.html">About Us</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div id="switch-container">
-        <h5 class="changeable-text" id="switch-label">Theme</h5>
-        <!-- Rounded switch -->
-        <label class="switch">
-            <input type="checkbox" id="slider">
-            <span class="slider round"></span>
-        </label>
-    </div>
-
     <main>
-        <div id="firebaseui-auth-container">
-            <h3>Log in to Your Account</h3>
+        <div id="firebaseui-auth-container" class="main-background">
+            <h3 class="main-text">Log in to Your Account</h3>
         </div>
     </main>
 

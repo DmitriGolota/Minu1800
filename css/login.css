@@ -3,12 +3,10 @@
 }
 
 #firebaseui-auth-container {
-    background-color: #EBEBEB;
     margin: auto;
     margin-top: 8%;
     padding: 20px 0px;
     border-radius: 20px;
-    border: 1px solid #F5F5F5;
     width: 400px;
 }
 
@@ -18,9 +16,9 @@
     margin-bottom: 40px;
 }
 
-#navbar {
-    background-color: #6d72c3 !important;
-}  
+.nav-link {
+    color: white !important;
+}
 
 @media screen and (max-width: 400px) {
     #firebaseui-auth-container {

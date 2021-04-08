@@ -1,0 +1,43 @@
+.main-button {
+    color: black !important;
+    background-color: white !important;
+    border-color: white;
+}
+
+.secondary-button {
+    background-color: #CC0300 !important;
+    border-color:  #CC0300 !important;
+}
+
+.main-background {
+    background-color: #CC0300 !important;
+}
+
+body {
+    background-color: #f7f5f6 !important;
+}
+
+.main-text {
+    color: #f5f7f6 !important;
+}
+
+.secondary-text {
+    color: #E4E1DD !important;
+}
+
+.main-link {
+    color: #E4E1DD !important;
+}
+
+.main-link:hover{
+    color: #39a5dc !important;
+}
+
+/* For login window; use .main-background colour */
+#firebaseui-auth-container button:first-child {
+    color: white;
+}
+
+#firebaseui-auth-container button {
+    background-color: #CC0300;
+}

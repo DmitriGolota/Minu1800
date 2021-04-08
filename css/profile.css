@@ -1,5 +1,5 @@
 * {
-    color: white;
+    color: black;
 }
 
 body {
@@ -27,10 +27,6 @@ body {
 #menus > h4 {
     float: left;
     margin-right: 40px;
-}
-
-#newmenu {
-    margin-top: -5px;
 }
 
 #infos {
