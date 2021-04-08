@@ -35,11 +35,8 @@ body {
     color: #39a5dc !important;
 }
 
-/* For login window; use .main-background colour */
-#firebaseui-auth-container button:first-child {
-    color: white;
-}
-
+/* For login window buttons */
 #firebaseui-auth-container button {
+    color: white;
     background-color: #CC0300;
 }

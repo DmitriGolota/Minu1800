@@ -9,10 +9,6 @@ body, html {
 	font-family: Poppins-Regular, sans-serif;
 }
 
-body{
-  background-color: rgb(73, 73, 73);
-}
-
 /*---------------------------------------------*/
 a {
 	font-family: Poppins-Regular;
@@ -50,10 +46,6 @@ p {
 ul, li {
 	margin: 0px;
 	list-style-type: none;
-}
-
-.container-contact100 {
-  background-color: #26272b !important; 
 }
 
 /*---------------------------------------------*/

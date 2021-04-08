@@ -36,6 +36,10 @@ body {
     height: 100%;
 }
 
+.btn {
+    margin-top: -5.5px;
+}
+
 .form-label {
     color: darkgray;
 }
