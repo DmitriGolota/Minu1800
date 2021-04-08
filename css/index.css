@@ -24,7 +24,7 @@ body {
   background-color: #26272b;
   color: white;
 }
-    
+
 #content {
     position: absolute;
     width: 100%;
@@ -56,6 +56,9 @@ body {
 #profile{
   position: inherit;
   margin-left: 80%;
+  background-color: #5e5069 !important;
+  border-color:  #624772 !important;
+  color: white !important;
 }
 
 /* Modal */
