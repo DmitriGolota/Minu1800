@@ -4,6 +4,8 @@
     border-color: white;
 }
 
+
+/* Should be same colour as main-background */
 .secondary-button {
     background-color: #CC0300 !important;
     border-color:  #CC0300 !important;
