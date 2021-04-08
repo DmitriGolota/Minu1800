@@ -7,16 +7,20 @@
 
 /* Should be same colour as main-background */
 .secondary-button {
-    background-color: #CC0300 !important;
-    border-color:  #CC0300 !important;
+    background-color: #5941a9 !important;
+    border-color:  #5941a9 !important;
 }
 
 .main-background {
-    background-color: #CC0300 !important;
+    background-color: #5941a9 !important;
+}
+
+.secondary-background {
+    background-color: #26272b !important;
 }
 
 body {
-    background-color: #f7f5f6 !important;
+    background-color: #26272b !important;
 }
 
 .main-text {
@@ -25,6 +29,10 @@ body {
 
 .secondary-text {
     color: #E4E1DD !important;
+}
+
+.dark-text {
+    color: black !important;
 }
 
 .main-link {
@@ -38,5 +46,5 @@ body {
 /* For login window buttons */
 #firebaseui-auth-container button {
     color: white;
-    background-color: #CC0300;
+    background-color: #5941a9;
 }

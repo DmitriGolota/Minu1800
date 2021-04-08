@@ -1,5 +1,5 @@
 * {
-    color: black;
+    color: #f5f7f6;
 }
 
 body {
@@ -47,14 +47,14 @@ body {
 .editbtns {
     float: right;
     cursor: pointer;
-    color: #28527a;
+    color: #5941a9;
 }
 
 .actions i{
     margin-right: 10px;
     font-size: 20px;
     cursor: pointer;
-    color: #28527a;
+    color: #5941a9;
 }
 
 .sub-titles {
