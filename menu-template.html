@@ -4,11 +4,13 @@
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/menu-template.css">
-    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <title>Menu Template Save Demo</title>
 </head>
 
 <body>
-    <main class="menu">
+    <main class="menu" id="photo">
         <section>
             <h1 class="restaurant-name">Your Restaurant Name Here</h1>
         </section>
@@ -60,5 +62,15 @@
                 <p class="course-price">$19.99</p>
             </section>
         </div>
+
     </main>
+    <div id="output"></div>
+    <button onclick="takeshot()">
+        Take Screenshot and Save Div
+    </button>
+
+
+    <script src="scripts/menutemplate.js"></script>
 </body>
+
+</html>
