@@ -9,12 +9,15 @@ let current_index = 0;
 
 btn_next_step.addEventListener('click', go_to_next_page);
 btn_last_step.addEventListener('click', go_to_last_page);
-add_dish_btn.addEventListener('click', addDishesAccordion);
 
 current_dish = [];
 
 div_titles = [div_bg_color, div_text_color, div_border, div_dishes];
 setAllHidden(div_titles)
+
+for(let i = 0; i < 6; i++) {
+    addDishesAccordion();
+}
 
 function setAllHidden(div_titles) {
     for (let div of div_titles) {
@@ -72,8 +75,6 @@ function addDishesAccordion() {
 function save_changes_from_input() {
     let inputs = document.getElementsByClassName('dish-inputs');
     for (let i = 0; i < current_dish.length; i += 1) {
-    console.log(current_dish[i])
-
         current_dish[i]['num'] = i+1;
         current_dish[i]['course_type'] = inputs[i * 3].value
         current_dish[i]['name'] = inputs[i * 3 + 1].value
