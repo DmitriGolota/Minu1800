@@ -18,3 +18,10 @@ myAudio.onpause = function() {
 document.getElementById("profile").addEventListener("click", function(event){
       window.location = "./login.html"
 });
+
+let btn = document.getElementById("myBtn")
+
+btn.onclick = function(){
+    window.location = "./template_controls/template_controls.html"
+};
+
