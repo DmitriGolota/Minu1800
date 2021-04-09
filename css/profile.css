@@ -4,6 +4,7 @@
 
 body {
     background-color: #26272b;
+    font-family: 'Varela Round', sans-serif !important;
 }
 
 #wrapper {
@@ -47,14 +48,14 @@ body {
 .editbtns {
     float: right;
     cursor: pointer;
-    color: #5941a9;
+    color: #706c70;
 }
 
 .actions i{
     margin-right: 10px;
     font-size: 20px;
     cursor: pointer;
-    color: #5941a9;
+    color: #706c70;
 }
 
 .sub-titles {
