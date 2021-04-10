@@ -22,6 +22,6 @@ document.getElementById("profile").addEventListener("click", function(event){
 let btn = document.getElementById("myBtn")
 
 btn.onclick = function(){
-    window.location = "./template_controls/template_controls.html"
+    window.location = "./main_tool.html"
 };
 
