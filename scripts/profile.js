@@ -99,3 +99,9 @@ function sayHello() {
     });
 }
 sayHello();
+
+let tomenu = document.getElementById("to-tool")
+
+tomenu.onclick = function(){
+    window.location = "./main_tool.html"
+}
