@@ -100,8 +100,33 @@ function sayHello() {
 }
 sayHello();
 
-let tomenu = document.getElementById("to-tool")
 
+// Link to main tool page from profile page
+
+let tomenu = document.getElementById("to-tool")
 tomenu.onclick = function(){
     window.location = "./main_tool.html"
+}
+
+// Delete button deletes each menu from profile for each menu created.
+
+let deletemenu1 = document.getElementById('delete-menu-1')
+deletemenu1.onclick = function(){
+    menusection = document.getElementById('tr-1')
+    menusection.remove()
+}
+let deletemenu2 = document.getElementById('delete-menu-2')
+deletemenu2.onclick = function(){
+    menusection = document.getElementById('tr-2')
+    menusection.remove()
+}
+let deletemenu3 = document.getElementById('delete-menu-3')
+deletemenu3.onclick = function(){
+    menusection = document.getElementById('tr-3')
+    menusection.remove()
+}
+let deletemenu4 = document.getElementById('delete-menu-4')
+deletemenu4.onclick = function(){
+    menusection = document.getElementById('tr-4')
+    menusection.remove()
 }
