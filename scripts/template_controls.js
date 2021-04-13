@@ -1,5 +1,18 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyCV6-efUlCaZoXzuD-nnNOd200p5inM6XM",
+    authDomain: "minu1800-df37c.firebaseapp.com",
+    projectId: "minu1800-df37c",
+    storageBucket: "minu1800-df37c.appspot.com",
+    messagingSenderId: "1001139316928",
+    appId: "1:1001139316928:web:529f2df9d5341d73296525"
+};
+
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
+
+
 let params = (new URL(document.location)).searchParams;
-let htmltexts = params.get("htmltext");
+let htmltexts = params.get("htmltexts");
 
 btn_next_step = document.getElementById('next-step');
 btn_last_step = document.getElementById('last-step');
@@ -106,3 +119,39 @@ for (let control of border_style_controls) {
         menu.style.borderStyle = style.getPropertyValue('border-style');
     })
 }
+
+// Save as pdf to DB
+let divitem = $('#db-div').html();
+
+function writeMenus() {
+    
+    var menuRef = db.collection("menus");
+    menuRef.add({
+        code: "user1",
+        name: "username",             
+        picture: "somephoto.jpeg",
+        template: "temp1",
+        version: 56423,
+        html: divitem.toString()
+
+    });
+    console.log("New collection added")
+}
+var menubtn = document.getElementById("generate_menu")
+
+menubtn.onclick = function(){
+    writeMenus();
+}
+
+// Load a user page from profile
+function loaduserpage(){
+    // create html object from string
+    console.log(htmltexts)
+    // remove sub-div and append new html object to div
+    divtoremove = document.getElementById('photo')
+    divtoremove.remove();
+    inserter = document.getElementById('db-div');
+    inserter.innerHTML = htmltexts;
+
+}
+loaduserpage();

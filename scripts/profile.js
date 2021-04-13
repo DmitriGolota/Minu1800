@@ -138,11 +138,10 @@ var htmltext = "asdf"
 editmenu1.onclick = function(){
     db.collection('menus').doc('0vnFf9XySjzEBeUiN1il')
     .onSnapshot(function(c){
-        console.log(c.data().html);
-        console.log(c.data().name)
         conv = (c.data().html);
-        htmltext = conv.toString();
-        window.location= './main_tool.html?htmltexts=' + htmltext;
+        htmltext = JSON.stringify(conv);
+        newtext = htmltext.replace(/%20/g, " ");
+        window.location= './main_tool.html?htmltexts=' + newtext;
     })
 
 }
