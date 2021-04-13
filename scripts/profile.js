@@ -130,3 +130,19 @@ deletemenu4.onclick = function(){
     menusection = document.getElementById('tr-4')
     menusection.remove()
 }
+
+// Edit button takes you to main tool page and loads the html
+
+let editmenu1 = document.getElementById('edit-menu-1');
+var htmltext = "asdf"
+editmenu1.onclick = function(){
+    db.collection('menus').doc('0vnFf9XySjzEBeUiN1il')
+    .onSnapshot(function(c){
+        console.log(c.data().html);
+        console.log(c.data().name)
+        conv = (c.data().html);
+        htmltext = conv.toString();
+        window.location= './main_tool.html?htmltexts=' + htmltext;
+    })
+
+}

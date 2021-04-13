@@ -1,3 +1,6 @@
+let params = (new URL(document.location)).searchParams;
+let htmltexts = params.get("htmltext");
+
 btn_next_step = document.getElementById('next-step');
 btn_last_step = document.getElementById('last-step');
 div_bg_color = document.getElementById('bg-color-wrapper');
