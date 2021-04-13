@@ -146,7 +146,12 @@ menubtn.onclick = function(){
 // Load a user page from profile
 function loaduserpage(){
     // create html object from string
-    console.log(htmltexts)
+    console.log(htmltexts);
+
+    //remove all isntances of unwanted characters from string using reexpression
+    var escapedFind=find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    htmltexts.replace(new RegExp(escapedFind, 'g'), replace);
+
     // remove sub-div and append new html object to div
     divtoremove = document.getElementById('photo')
     divtoremove.remove();
