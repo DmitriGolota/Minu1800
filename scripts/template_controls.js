@@ -20,6 +20,7 @@ div_bg_color = document.getElementById('bg-color-wrapper');
 div_text_color = document.getElementById('text-color-wrapper');
 div_border = document.getElementById('border-wrapper');
 div_dishes = document.getElementById('dishes-wrapper');
+div_export = document.getElementById('export-wrapper');
 apply_btn = document.getElementById('apply-change-btn');
 let current_index = 0;
 
@@ -29,7 +30,7 @@ apply_btn.addEventListener('click', save_changes_from_input);
 
 current_dish = [];
 
-div_titles = [div_bg_color, div_text_color, div_border, div_dishes];
+div_titles = [div_bg_color, div_text_color, div_border, div_dishes, div_export];
 setAllHidden(div_titles)
 
 function setAllHidden(div_titles) {
@@ -99,7 +100,6 @@ for (let control of font_controls) {
     control.addEventListener('click', function () {
         let style = window.getComputedStyle(control)
         let font_color = style.getPropertyValue('background-color');
-        console.log(font_color)
         menu.style.color = font_color;
     })
 }
@@ -144,19 +144,19 @@ menubtn.onclick = function(){
 }
 
 
-// Load a user page from profile
-function loaduserpage(){
-    // create html object from string
-    console.log(htmltexts);
+// // Load a user page from profile
+// function loaduserpage(){
+//     // create html object from string
+//     console.log(htmltexts);
 
 
-    // remove sub-div and append new html object to div
-    divtoremove = document.getElementById('photo')
-    divtoremove.remove();
-    inserter = document.getElementById('db-div');
-    inserter.innerHTML = htmltexts;
+//     // remove sub-div and append new html object to div
+//     divtoremove = document.getElementById('photo')
+//     divtoremove.remove();
+//     inserter = document.getElementById('db-div');
+//     inserter.innerHTML = htmltexts;
     
-    console.log("loaded successfully")
+//     console.log("loaded successfully")
 
-}
-loaduserpage();
+// }
+// loaduserpage();

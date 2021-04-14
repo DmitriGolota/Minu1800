@@ -1,22 +1,217 @@
 /* Entire menu as a div*/
-.menu{
-    position: relative;
-    width: 600px;
-    height: 800px;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
+.menu {
+    margin: 15px auto;
+    width: 100%;
+    max-width: 700px;
+    height: 750px;
     border: solid 5px black;
+    position: relative;
+    text-align: center;
 }
 
 .restaurant-name {
-    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 25px 0;
 }
 
-.course * {
-    margin: 10px;
+.course-type {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.course-name {
+    font-size: 20px;
+}
+
+.course-price, .course-description,  .course-name{
+    margin-bottom: 3px;
 }
 
 .separator {
-    width: 400px;
+    width: 80%;
+    margin-left: 10%;
+}
+
+main {
+    background-color: white;
+}
+
+#output {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.controls-wrapper {
+    border: 1px black solid;
+    padding: 15px 20px;
+    overflow-y: scroll;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    z-index: 99;
+    background: white;
+}
+
+.bg-control {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.color-circles {
+    width: 40px;
+    height: 40px;
+    border-radius: 21px;
+    display: inline-block;
+    border: 2px solid darkgrey;
+    margin-right: 20px;
+    margin-bottom: 30px;
+}
+
+.color-circles:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.bg-teal {
+    background-color: teal;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-gold {
+    background-color: gold;
+}
+
+.bg-grey {
+    background-color: darkgrey;
+}
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-azure {
+    background-color: azure;
+}
+
+.bg-lemon {
+    background-color: lemonchiffon;
+}
+
+.bg-coral {
+    background-color: lightcoral;
+}
+
+.bg-salmon {
+    background-color: lightsalmon;
+}
+
+.bg-coral {
+    background-color: lightcoral;
+}
+
+.bg-sky {
+    background-color: lightskyblue;
+}
+
+.bg-cyan {
+    background-color: lightcyan;
+}
+
+.bg-chocolate {
+    background-color: chocolate;
+}
+
+.minu-success {
+    background-color: #28527a;
+    color: white;
+}
+
+.minu-primary {
+    background-color: #28527a;
+    color: white;
+}
+
+.border-box {
+    height: 50px;
+    padding-top: 10px;
+    width: 100px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.border-box:hover {
+    transform: scale(1.1);
+}
+
+.border-dotted {
+    border: 5px dotted black;
+}
+
+.border-solid {
+    border: 5px solid black;
+}
+
+.border-dotted-thick {
+    border: 7px dotted black;
+}
+
+.border-solid-thick {
+    border: 7px solid black;
+}
+
+#addDishBtn {
+    float: right;
+    clear: both;
+}
+
+#dishes-wrapper {
+    margin-bottom: 25px;
+}
+
+#apply-change-btn {
+    margin-top: 20px;
+}
+
+.circle_selected {
+    border: 3px solid lightgreen;
+}
+
+.controls-wrapper h4 {
+    text-align: center;
+}
+
+#last-step {
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+#next-step {
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.dish-inputs {
+    margin-bottom: 5px;
+}
+
+#db-div {
+    height: 500px;
+    overflow-y: scroll;
 }

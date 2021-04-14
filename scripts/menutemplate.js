@@ -20,7 +20,6 @@ function takeshot() {
             pdf.addImage(imgData, 'JPEG', 0, 0);
             pdf.save("menu.pdf");
             console.log("successful functions execution")
-
         })
 }
 
