@@ -132,7 +132,7 @@ function writeMenus() {
         picture: "somephoto.jpeg",
         template: "temp1",
         version: 56423,
-        html: divitem.toString()
+        html: divitem
 
     });
     console.log("New collection added")
@@ -143,20 +143,20 @@ menubtn.onclick = function(){
     writeMenus();
 }
 
+
 // Load a user page from profile
 function loaduserpage(){
     // create html object from string
     console.log(htmltexts);
 
-    //remove all isntances of unwanted characters from string using reexpression
-    var escapedFind=find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
-    htmltexts.replace(new RegExp(escapedFind, 'g'), replace);
 
     // remove sub-div and append new html object to div
     divtoremove = document.getElementById('photo')
     divtoremove.remove();
     inserter = document.getElementById('db-div');
     inserter.innerHTML = htmltexts;
+    
+    console.log("loaded successfully")
 
 }
 loaduserpage();

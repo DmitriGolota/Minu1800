@@ -134,14 +134,23 @@ deletemenu4.onclick = function(){
 // Edit button takes you to main tool page and loads the html
 
 let editmenu1 = document.getElementById('edit-menu-1');
-var htmltext = "asdf"
+var htmltext = ""
+var htmltext2 = ""
+var htmllegit = ""
 editmenu1.onclick = function(){
-    db.collection('menus').doc('0vnFf9XySjzEBeUiN1il')
+    // testing from known data
+    db.collection('menus').doc('EP7cCg6LDo5HlPSC3jOm')
     .onSnapshot(function(c){
         conv = (c.data().html);
-        htmltext = JSON.stringify(conv);
-        newtext = htmltext.replace(/%20/g, " ");
-        window.location= './main_tool.html?htmltexts=' + newtext;
+
+        htmltext = JSON.stringify(conv)
+        htmltext2 = conv.replace(/(\r\n|\n|\r)/gm, "");
+        htmllegit = htmltext2.toString();
+        console.log(htmltext);
+        console.log(htmltext2);
+        console.log(htmllegit);
+        
+        window.location= './main_tool.html?htmltexts=' + htmllegit;
     })
 
 }
