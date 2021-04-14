@@ -1,7 +1,8 @@
+let pdfsave = document.getElementById('savepdf')
 
 // Define the function 
 // to screenshot the div
-function takeshot() {
+takeshot = function() {
     let div = document.getElementById('photo');
     
     // Use the html2canvas
@@ -12,7 +13,7 @@ function takeshot() {
         function (canvas) {
             var myobj = document.getElementById('photo')
             myobj.remove();
-            document.getElementById('output').appendChild(canvas);
+            document.getElementById('db-div').appendChild(canvas);
 
             var imgData = canvas.toDataURL("image/jpeg", 1.0);
             var pdf = new jsPDF();
@@ -22,4 +23,5 @@ function takeshot() {
             console.log("successful functions execution")
         })
 }
+
 

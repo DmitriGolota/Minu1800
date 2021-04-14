@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/menu-template.css">
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
@@ -21,6 +21,7 @@
             <h4 class ="headers">Background</h4>
             <hr>
             <h5 class ="headers">Color</h5>
+            <br>
             <div class="bg-control">
                 <div class="bg-controls color-circles bg-teal"></div>
                 <div class="bg-controls color-circles bg-black"></div>
@@ -40,6 +41,7 @@
             <h4 class ="headers">Font</h4>
             <hr>
             <h5 class ="headers">Color</h5>
+            <br>
             <div class="bg-control">
                 <div class="font_controls color-circles bg-teal"></div>
                 <div class="font_controls color-circles bg-black"></div>
@@ -219,7 +221,7 @@
             <p class = "description" >Your menu is looking great! If you're happy with your design, lets move on to the next step,
                 otherwise keep configuring to your hearts content.</p>
             <p class = "description">Time to show your beautiful menu to the world!</p>
-            <button id="savepdf"></button>
+            <button id="savepdf" onclick="takeshot()"></button>
             <!-- Save button for testing html write to DB-->
             <button id="generate_menu"></button>
         </div>
