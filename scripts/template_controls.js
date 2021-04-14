@@ -121,10 +121,8 @@ for (let control of border_style_controls) {
 }
 
 // Save as pdf to DB
-let divitem = $('#db-div').html();
-
 function writeMenus() {
-    
+    let divitem = document.getElementById('db-div').innerHTML;
     var menuRef = db.collection("menus");
     menuRef.add({
         code: "user1",
@@ -133,7 +131,6 @@ function writeMenus() {
         template: "temp1",
         version: 56423,
         html: divitem
-
     });
     console.log("New collection added")
 }
