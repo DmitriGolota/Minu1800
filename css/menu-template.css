@@ -25,6 +25,10 @@ body{
     color: white; 
 }
 
+.accordion{
+    background-image: linear-gradient(to bottom, #44A08D, #093637) !important;
+}
+
 #backgroundalpha{
     background-color: rgba(255, 255, 255, 0.116);
 }
@@ -134,7 +138,56 @@ main {
     transform: scale(1.5);
     cursor: pointer;
 }
+/* gradients */
+.bg-tealgrad {
+    background-image: linear-gradient(to bottom, #44A08D, #093637);
+}
 
+.bg-blackgrad {
+    background-image: linear-gradient(0.25turn, #0F2027, #203A43, #2C5364);
+}
+
+.bg-goldgrad {
+    background-image: linear-gradient(to bottom, #CAC531, #F3F9A7);
+}
+
+.bg-greygrad {
+    background-image: linear-gradient(to right, #ADA996, #F2F2F2,#DBDBDB,#EAEAEA);
+}
+
+.bg-whitegrad {
+    background-image: linear-gradient(to right, #E0EAFC, #CFDEF3);
+}
+
+.bg-azure {
+    background-color: azure;
+}
+
+.bg-lemongrad {
+    background-image: linear-gradient(to right, #A1FFCE, #FAFFD1);
+}
+
+.bg-coralgrad {
+    background-image: linear-gradient(to bottom, #B24592, #F15F79);
+}
+
+.bg-salmongrad {
+    background-image: linear-gradient(to right , #e96443, #904e95)
+}
+
+.bg-skygrad {
+    background-image: linear-gradient(to top ,#56CCF2, #2F80ED)
+}
+
+.bg-cyan {
+    background-color: lightcyan;
+}
+
+.bg-chocolatesgrad {
+    background-image: linear-gradient(to top ,#ffe259, #ffa751)
+}
+
+/* for font */
 .bg-teal {
     background-color: teal;
 }
@@ -241,7 +294,12 @@ main {
 }
 
 #apply-change-btn {
+    height: 100px;
+    width: 100px;
+    background:url(../media/Clipboard.jpg) no-repeat;
+    background-size: cover;
     margin-top: 20px;
+    border-radius: 50%;
 }
 
 .circle_selected {
