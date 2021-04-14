@@ -25,6 +25,10 @@ body{
     color: white; 
 }
 
+#backgroundalpha{
+    background-color: rgba(255, 255, 255, 0.116);
+}
+
 .description{
     text-align: center;
     font-family:'Times New Roman', Times, serif !important;
@@ -201,6 +205,7 @@ main {
     text-align: center;
     cursor: pointer;
     margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.116);
 }
 
 .border-box:hover {
@@ -209,6 +214,7 @@ main {
 
 .border-dotted {
     border: 5px dotted black;
+    background-color: rgba(255, 255, 255, 0.116);
 }
 
 .border-solid {
