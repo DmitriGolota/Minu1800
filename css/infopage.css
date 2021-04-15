@@ -3,8 +3,8 @@ html{
 }
 
 body{
+    color: white;
     background-image: linear-gradient(to bottom, rgb(112, 103, 117), rgb(49, 35, 53)) !important;
-    color: black;
     text-align: center;
 }
 article {
@@ -12,7 +12,10 @@ article {
     text-align: justify;
     margin: 50px 80px 20px 80px;
     }
-
+.minuteam{
+    background-image: linear-gradient(to bottom, rgba(51, 33, 59, 0.13),rgba(51, 33, 59, 0.651)) !important;
+    border-radius: 50%;    
+}
 h2{
     font-family: 'Playfair Display', serif;
     animation-name: example;
@@ -22,12 +25,12 @@ section {
     animation-name: example;
     animation-duration: 8s;
     
-  }
+}
   
   @keyframes example {
-    from {color: rgba(0, 0, 0, 0);}
-    to {color: rgb(0, 0, 0);}
-  }
+    from {color: rgba(255, 255, 255, 0);}
+    to {color: rgb(255, 255, 255);}
+}
 
   @keyframes fadein {
     from { opacity: 0; }
