@@ -140,9 +140,38 @@ It has the following subfolders and files:
     /background.png
     /blah.jpg
     /boders-with-transparent-background-14.png
-    /CALEBO.png
+    /CALEBO.webp
+    /cardimage1.png
+    /checkbox.png
+    /Clipboard.jpg
+    /Michaelpic.png
+    /Minucookingreel.mp4
+    /pdfimg.png
+    /reel1.jpg
+    /reel2.jpg
+    /reel3.jpg
+    /saddimon.jpg
+    /soundpix.jpg
+    /soundpix.webp
 ├── scripts -> Contain JavaScript for .html files
-├── unused -> Contain files not used in final MVP
+    /blah.js
+    /firebase-api-contact-form.js
+    /firebase-api-minu.js
+    /index.js
+    /menutemplate.js
+    /profile.js
+    /sample.js
+    /template-controls.js
+    /template-library.js
+└── unused -> Contain files not used in final MVP
+    /menu-template2.css
+    /menu-template2.html
+    /sample.css
+    /sample.html
+    /saveimgaspdftest.html
+    /template-library.css
+    /testpage1stylesheet.css
+    /toolpagetesting.css
 
 Firebase hosting files: 
 ├── hosting..cache
