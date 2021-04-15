@@ -72,23 +72,3 @@ var uiConfig = {
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
 
-// Help message toggle
-helpMessage = document.getElementById("help-message-container");
-document.getElementById("help-button").addEventListener("click", function (event) {
-    if (helpMessage.style.display == "none") {
-        helpMessage.style.display = "block";
-    }
-    else if (helpMessage.style.display == "block") {
-        helpMessage.style.display = "none";
-    }
-});
-
-/// firebase.auth().onAuthStateChanged(function(user) {
-///     if (user) {
-///       // User is signed in.
-///       window.location = "/profile.html"
-///     } else {
-///       // No user is signed in.
-///       window.location = "/login/login.html"
-///     }
-///   });
