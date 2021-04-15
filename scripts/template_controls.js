@@ -22,6 +22,9 @@ div_border = document.getElementById('border-wrapper');
 div_dishes = document.getElementById('dishes-wrapper');
 div_export = document.getElementById('export-wrapper');
 apply_btn = document.getElementById('apply-change-btn');
+resto_name = document.getElementById('restoname');
+welcome_msg = document.getElementById('welcome');
+
 let current_index = 0;
 
 btn_next_step.addEventListener('click', go_to_next_page);
@@ -30,7 +33,7 @@ apply_btn.addEventListener('click', save_changes_from_input);
 
 current_dish = [];
 
-div_titles = [div_bg_color, div_text_color, div_border, div_dishes, div_export];
+div_titles = [welcome_msg, resto_name, div_bg_color, div_text_color, div_border, div_dishes, div_export];
 setAllHidden(div_titles)
 
 function setAllHidden(div_titles) {
@@ -58,6 +61,18 @@ function go_to_last_page() {
         current_index -= 1;
     }
     div_titles[current_index].style.display = "block";
+}
+
+function submitname(){
+    var headerdel = document.getElementById('restaurant-name');
+    headerdel.remove();
+    let newname = document.getElementById("menuname").value;
+    let node = document.createElement("H1")
+    node.setAttribute("id", "restaurant-name")
+    let headername = document.createTextNode(newname)
+    let menu_section = document.getElementById("restaurant-menu-div")
+    node.appendChild(headername)
+    menu_section.appendChild(node)
 }
 
 function save_changes_from_input() {
@@ -119,6 +134,8 @@ for (let control of border_style_controls) {
         menu.style.borderStyle = style.getPropertyValue('border-style');
     })
 }
+
+
 
 // Save as pdf to DB
 function writeMenus() {

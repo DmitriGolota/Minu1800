@@ -24,6 +24,22 @@ body{
 .headers{
     color: white; 
 }
+.welcome-text{
+    text-align: center;
+    color: white;
+}
+.nameinput{
+    text-align: center;
+}
+
+#menubutton{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background:url(../media/checkbox.png) no-repeat;
+    background-size: contain;
+    
+}
 
 .accordion{
     background-color: rgba(255, 255, 255, 0.322);
