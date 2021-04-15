@@ -139,7 +139,7 @@ var htmltext2 = ""
 var htmllegit = ""
 editmenu1.onclick = function(){
     // testing from known data
-    db.collection('menus').doc('EP7cCg6LDo5HlPSC3jOm')
+    db.collection('menus').doc('U2QjY28DGV6FYOHGPSXS')
     .onSnapshot(function(c){
         conv = (c.data().html);
 

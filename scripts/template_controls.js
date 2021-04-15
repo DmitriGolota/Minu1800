@@ -89,7 +89,7 @@ function save_changes_from_input() {
     let description_inputs = document.getElementsByClassName('description-inputs');
     let price_inputs = document.getElementsByClassName('price-inputs');
 
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         course_names[i].innerHTML = dish_name_inputs[i].value;
         course_decscriptions[i].innerHTML = description_inputs[i].value;
         course_prices[i].innerHTML = '$' + price_inputs[i].value;
@@ -159,18 +159,35 @@ menubtn.onclick = function(){
 
 
 // // Load a user page from profile
-// function loaduserpage(){
-//     // create html object from string
-//     console.log(htmltexts);
+function loaduserpage(){
+    // create html object from string
+    console.log(htmltexts);
 
-
-//     // remove sub-div and append new html object to div
-//     divtoremove = document.getElementById('photo')
-//     divtoremove.remove();
-//     inserter = document.getElementById('db-div');
-//     inserter.innerHTML = htmltexts;
+    // remove sub-div and append new html object to div
+    divtoremove = document.getElementById('photo')
+    divtoremove.remove();
+    inserter = document.getElementById('db-div');
+    inserter.innerHTML = htmltexts;
     
-//     console.log("loaded successfully")
+    console.log("loaded successfully")
 
-// }
-// loaduserpage();
+    }
+
+function checkmenu(){
+    db.collection('users').get().then((querySnapshot) =>{
+        querySnapshot.forEach((doc) => {
+            console.log(doc.id, " => ", doc.data());
+            
+            if (doc.data().name == "Johnny Bones"){
+                loaduserpage();
+            }
+
+        })
+
+        
+    })
+
+}
+
+// toggle for MVP prototype for now
+//checkmenu();
