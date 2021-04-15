@@ -9,7 +9,6 @@ body, html {
 	font-family: Poppins-Regular, sans-serif;
 }
 
-/*---------------------------------------------*/
 a {
 	font-family: Poppins-Regular;
 	font-size: 14px;
@@ -30,7 +29,6 @@ a:hover {
 	text-decoration: none;
 }
 
-/*---------------------------------------------*/
 h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
@@ -178,9 +176,6 @@ iframe {
 
 
 
-/*------------------------------------------------------------------
-[  ]*/
-
 .wrap-input100 {
   width: 100%;
   position: relative;
@@ -236,8 +231,7 @@ textarea.input100 {
 }
 
 
-/*------------------------------------------------------------------
-[ Button ]*/
+
 .container-contact100-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -294,8 +288,7 @@ textarea.input100 {
   transform: translateX(10px);
 }
 
-/*------------------------------------------------------------------
-[ Responsive ]*/
+
 
 @media (max-width: 768px) {
   .rs1-wrap-input100 {
@@ -316,8 +309,6 @@ textarea.input100 {
 
 
 
-/*------------------------------------------------------------------
-[ Alert validate ]*/
 
 .validate-input {
   position: relative;
@@ -388,7 +379,7 @@ textarea.input100 {
   right: 10px;
 }
 
-/*---------------------------------------------*/
+
 @media (max-width: 576px) {
   .alert-validate::before {
     padding: 0 10px 0 10px;
@@ -400,10 +391,6 @@ textarea.input100 {
     width: 30px;
   }
 }
-
-
-/*==================================================================
-[ Restyle Select2 ]*/
 
 .select2-container {
   display: block;
@@ -425,8 +412,6 @@ textarea.input100 {
   position: relative;
 }
 
-/*------------------------------------------------------------------
-[ in select ]*/
 .select2-container .select2-selection--single .select2-selection__rendered {
   font-family: Montserrat-SemiBold;
   font-size: 18px;
