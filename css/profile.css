@@ -8,17 +8,14 @@ body {
 }
 
 #wrapper {
-    display: flex;
-    justify-content: flex-start;
     width: 100%;
-    height: 80vh;
-    padding: 20px 20px 0 10px;
+    padding: 20px 20px 20px 25px;
 }
 
 #menus {
     flex: 1;
-    padding: 20px;
     height: 100%;
+    padding-bottom: 25px;
 }
 
 #menus > h2 {
@@ -30,13 +27,6 @@ body {
     margin-right: 40px;
 }
 
-#infos {
-    flex: 0.4;
-    padding: 20px 20px 20px 40px;
-    border-left: 1px solid darkgray;
-    height: 100%;
-}
-
 .btn {
     margin-top: -5.5px;
 }
@@ -46,16 +36,17 @@ body {
 }
 
 .editbtns {
-    float: right;
     cursor: pointer;
-    color: #706c70;
+    color: mediumpurple;
+    margin-left: 10px;
+    font-size: 14px;
 }
 
 .actions i{
     margin-right: 10px;
     font-size: 20px;
     cursor: pointer;
-    color: #706c70;
+    color: mediumpurple;
 }
 
 .sub-titles {
