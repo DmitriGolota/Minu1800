@@ -169,10 +169,6 @@ for (let control of border_style_controls) {
 
 // // Load a user page from profile
 function loaduserpage(html) {
-    // create html object from string
-    console.log(html);
-
-    // remove sub-div and append new html object to div
     divtoremove = document.getElementById('photo')
     divtoremove.remove();
     inserter = document.getElementById('db-div');

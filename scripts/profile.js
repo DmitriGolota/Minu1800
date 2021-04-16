@@ -68,13 +68,11 @@ function updateDocToScreen() {
 
 firebase.auth().onAuthStateChanged(function (somebody) {
     if (somebody) {
-        console.log(somebody.uid);
         uid = somebody.uid;
         db.collection("users")
             .doc(somebody.uid)
             .get()
             .then(function (doc) {
-                console.log(doc.data());
                 userDoc = doc.data();
                 updateDocToScreen();
                 setup_data_table();
@@ -135,7 +133,6 @@ function setup_data_table() {
             table.appendChild(new_tbody);
             querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
-                console.log(doc.data())
                 new_tbody.innerHTML +=
                     '<tr id = "' + doc.id + '" class= "table-rows">\
                     <td colspan="2">' + doc.data().menu_name + '</td>\

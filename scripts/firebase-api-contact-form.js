@@ -24,7 +24,6 @@ let contactFormMessage = document.querySelector('#contactFormMessage');
 const db = firestore.collection("contactData");
 
 contactFormSubmitBtn.addEventListener('click', function () {
-    console.log("Hello");
     let contactNameInput = contactFormName.value;
     let contactEmailInput = contactFormEmail.value;
     let contactPhoneInput = contactFormPhone.value;
@@ -40,7 +39,6 @@ contactFormSubmitBtn.addEventListener('click', function () {
         message: contactMessageInput
     }).then(function () {
         alert('We have received your message. Thank you for your feedback.')
-        console.log('Data Saved.');
     }).catch(function (error) {
         console.log(error);
     });
