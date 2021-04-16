@@ -4,20 +4,15 @@ let pdfsave = document.getElementById('savepdf')
 // to screenshot the div
 takeshot = function () {
     let div = document.getElementById('photo');
-
-    // Use the html2canvas
-    // function to take a screenshot
-    // and append it
-    // to the output div
     html2canvas(div).then(
         function (canvas) {
-            var myobj = document.getElementById('photo')
-            var imgData = canvas.toDataURL("image/jpeg", 1.0);
-            var pdf = new jsPDF('p', 'mm', [525, 565]);
+            var imgData = canvas.toDataURL("image/png", 0);
+            var doc = new jsPDF("p", "mm", "a4");
 
-            pdf.addImage(imgData, 'JPEG', 0, 0);
-            pdf.save("menu.pdf");
-            console.log("successful functions execution")
+            var width = doc.internal.pageSize.getWidth();
+            var height = doc.internal.pageSize.getHeight();
+            doc.addImage(imgData, 'JPEG', 0, 0, width, height);
+            doc.save("menu.pdf");
         })
 }
 
