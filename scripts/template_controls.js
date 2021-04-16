@@ -10,10 +10,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-
-let params = (new URL(document.location)).searchParams;
-let htmltexts = params.get("htmltexts");
-
 btn_next_step = document.getElementById('next-step');
 btn_last_step = document.getElementById('last-step');
 div_bg_color = document.getElementById('bg-color-wrapper');
@@ -26,12 +22,26 @@ resto_name = document.getElementById('restoname');
 welcome_msg = document.getElementById('welcome');
 
 let current_index = 0;
+const urlParams = new URLSearchParams(window.location.search);
+let menu_id = urlParams.get('id');
 
 btn_next_step.addEventListener('click', go_to_next_page);
 btn_last_step.addEventListener('click', go_to_last_page);
 apply_btn.addEventListener('click', save_changes_from_input);
+let userDoc = {};
+firebase.auth().onAuthStateChanged(function (somebody) {
+    if (somebody) {
+        uid = somebody.uid;
+        db.collection("users")
+            .doc(somebody.uid)
+            .get()
+            .then(function (doc) {
+                userDoc = doc.data();
+            })
+    }
+});
 
-current_dish = [];
+let current_dish = [];
 
 div_titles = [welcome_msg, resto_name, div_bg_color, div_text_color, div_border, div_dishes, div_export];
 setAllHidden(div_titles)
@@ -53,6 +63,26 @@ function go_to_next_page() {
         current_index += 1;
     }
     div_titles[current_index].style.display = "block";
+    let divitem = document.getElementById('db-div').innerHTML;
+    let menu_obj = {
+        html: divitem,
+        is_new: false,
+        name: userDoc.name,
+        user_email: userDoc.email,
+        edited: true,
+        menu_name: document.getElementById('restaurant-name').innerHTML,
+        last_edited: (new Date()).toDateString()
+    }
+    if (menu_id !== null && menu_id !== '') {
+        db.collection("menus").doc(menu_id).update(menu_obj)
+            .then(() => {
+                console.log("Menu successfully updated!");
+            })
+            .catch((error) => {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
+    }
 }
 
 function go_to_last_page() {
@@ -63,7 +93,7 @@ function go_to_last_page() {
     div_titles[current_index].style.display = "block";
 }
 
-function submitname(){
+function submitname() {
     var headerdel = document.getElementById('restaurant-name');
     headerdel.remove();
     let newname = document.getElementById("menuname").value;
@@ -96,7 +126,6 @@ function save_changes_from_input() {
     }
 }
 
-let menu = document.getElementById('photo');
 
 bg_controls = document.getElementsByClassName('bg-controls');
 font_controls = document.getElementsByClassName('font_controls');
@@ -105,6 +134,7 @@ border_style_controls = document.getElementsByClassName('border-box');
 
 for (let control of bg_controls) {
     control.addEventListener('click', function () {
+        let menu = document.getElementById('photo');
         let style = window.getComputedStyle(control)
         let bg_color = style.getPropertyValue('background');
         menu.style.background = bg_color;
@@ -113,6 +143,7 @@ for (let control of bg_controls) {
 
 for (let control of font_controls) {
     control.addEventListener('click', function () {
+        let menu = document.getElementById('photo');
         let style = window.getComputedStyle(control)
         let font_color = style.getPropertyValue('background-color');
         menu.style.color = font_color;
@@ -121,6 +152,7 @@ for (let control of font_controls) {
 
 for (let control of border_color_controls) {
     control.addEventListener('click', function () {
+        let menu = document.getElementById('photo');
         let style = window.getComputedStyle(control)
         let border_color = style.getPropertyValue('background-color');
         menu.style.borderColor = border_color;
@@ -129,65 +161,44 @@ for (let control of border_color_controls) {
 
 for (let control of border_style_controls) {
     control.addEventListener('click', function () {
+        let menu = document.getElementById('photo');
         let style = window.getComputedStyle(control)
-        menu.style.borderWidth = style.getPropertyValue('border-width');
-        menu.style.borderStyle = style.getPropertyValue('border-style');
+        menu.style.border = style.getPropertyValue('border');
     })
 }
 
-
-
-// Save as pdf to DB
-function writeMenus() {
-    let divitem = document.getElementById('db-div').innerHTML;
-    var menuRef = db.collection("menus");
-    menuRef.add({
-        code: "user1",
-        name: "username",             
-        picture: "somephoto.jpeg",
-        template: "temp1",
-        version: 56423,
-        html: divitem
-    });
-    console.log("New collection added")
-}
-var menubtn = document.getElementById("generate_menu")
-
-menubtn.onclick = function(){
-    writeMenus();
-}
-
-
 // // Load a user page from profile
-function loaduserpage(){
+function loaduserpage(html) {
     // create html object from string
-    console.log(htmltexts);
+    console.log(html);
 
     // remove sub-div and append new html object to div
     divtoremove = document.getElementById('photo')
     divtoremove.remove();
     inserter = document.getElementById('db-div');
-    inserter.innerHTML = htmltexts;
-    
-    console.log("loaded successfully")
+    inserter.innerHTML = html;
+}
 
+function checkmenu() {
+    if (menu_id !== null && menu_id !== '') {
+        let temp_html = document.getElementById('db-div').innerHTML
+        document.getElementById('db-div').innerHTML =
+            '<div class="spinner-border text-minu-primary" role="status">\
+        <span class="visually-hidden">Loading...</span>\
+        </div>';
+        db.collection("menus")
+            .doc(menu_id)
+            .get()
+            .then(function (doc) {
+                document.getElementById('db-div').innerHTML = temp_html;
+                if (!doc.data().is_new) {
+                    loaduserpage(doc.data().html);
+                }
+            }).catch(err => {
+                document.getElementById('db-div').innerHTML = temp_html;
+            })
     }
-
-function checkmenu(){
-    db.collection('users').get().then((querySnapshot) =>{
-        querySnapshot.forEach((doc) => {
-            console.log(doc.id, " => ", doc.data());
-            
-            if (doc.data().name == "Johnny Bones"){
-                loaduserpage();
-            }
-
-        })
-
-        
-    })
 
 }
 
-// toggle for MVP prototype for now
-//checkmenu();
+checkmenu();

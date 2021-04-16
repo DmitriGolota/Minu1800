@@ -347,6 +347,21 @@ main {
 }
 
 #db-div {
-    height: 500px;
+    height: calc(100vh - 395px);
     overflow-y: scroll;
+}
+
+#restaurant-name {
+    padding: 15px 0 0 15px;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.main-background {
+    background-image: linear-gradient(to bottom right, rgb(149, 125, 163), rgb(60, 27, 70)) !important;
+}
+
+.spinner-border {
+    color: white;
+    margin: 25% 0 0 48%;
 }

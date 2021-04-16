@@ -10,7 +10,8 @@
     <!-- Include from the CDN -->
     <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js">
     </script>
-        <script src="scripts/jspdf.min.js"></script> 
+    <script src="scripts/jspdf.min.js"></script>
+
 
     <!-- Include locally otherwise -->
     <!-- <script src='html2canvas.js'></script> -->
@@ -20,13 +21,14 @@
             border: 4px solid green;
             padding: 4px;
         }
-        html{
+
+        html {
             height: 100%;
         }
-        div{
+
+        div {
             background-color: white;
         }
-
     </style>
 </head>
 
@@ -71,11 +73,11 @@
                 function (canvas) {
 
                     document.getElementById('output').appendChild(canvas);
-        
+
                     var imgData = canvas.toDataURL("image/jpeg", 1.0);
                     var pdf = new jsPDF();
 
-                    pdf.addImage(imgData, 'JPEG', 0, 0);
+                    pdf.addImage(imgData, 'JPEG', 50, 50);
                     pdf.save("menu.pdf");
                     console.log("successful functions execution")
 

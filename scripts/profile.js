@@ -49,14 +49,14 @@ function editBusiness() {
 
 function updateToFireStore() {
     db.collection("users").doc(uid).update(userDoc)
-    .then(() => {
-        updateDocToScreen();
-        console.log("Document successfully updated!");
-    })
-    .catch((error) => {
-        // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
-    });
+        .then(() => {
+            updateDocToScreen();
+            console.log("Document successfully updated!");
+        })
+        .catch((error) => {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        });
 }
 
 function updateDocToScreen() {
@@ -77,6 +77,7 @@ firebase.auth().onAuthStateChanged(function (somebody) {
                 console.log(doc.data());
                 userDoc = doc.data();
                 updateDocToScreen();
+                setup_data_table();
             })
     }
 });
@@ -104,53 +105,71 @@ sayHello();
 // Link to main tool page from profile page
 
 let tomenu = document.getElementById("to-tool")
-tomenu.onclick = function(){
-    window.location = "./main_tool.html"
+tomenu.onclick = function () {
+    var menuRef = db.collection("menus");
+    menuRef.add({
+        user_email: userDoc.email,
+        name: userDoc.name,
+        is_new: true,
+        html: '',
+        menu_name: 'New Menu',
+        last_edited: (new Date()).toDateString()
+    }).then(doc => {
+        window.location = "./main_tool.html?id=" + doc.id;
+    });
 }
 
-// Delete button deletes each menu from profile for each menu created.
 
-let deletemenu1 = document.getElementById('delete-menu-1')
-deletemenu1.onclick = function(){
-    menusection = document.getElementById('tr-1')
-    menusection.remove()
-}
-let deletemenu2 = document.getElementById('delete-menu-2')
-deletemenu2.onclick = function(){
-    menusection = document.getElementById('tr-2')
-    menusection.remove()
-}
-let deletemenu3 = document.getElementById('delete-menu-3')
-deletemenu3.onclick = function(){
-    menusection = document.getElementById('tr-3')
-    menusection.remove()
-}
-let deletemenu4 = document.getElementById('delete-menu-4')
-deletemenu4.onclick = function(){
-    menusection = document.getElementById('tr-4')
-    menusection.remove()
-}
+function setup_data_table() {
+    db.collection("menus").where("user_email", "==", userDoc.email)
+        .get()
+        .then((querySnapshot) => {
+            let table = document.getElementById('data-table');
+            table.innerHTML = '';
+            table.innerHTML += ('<thead>\
+                <tr>\
+                <th scope="col" colspan="2">Menu Name</th>\
+                <th scope="col">Last Edited</th>\
+                <th scope="col">Action</th></tr></thead>');
+            let new_tbody = document.createElement('tbody');
+            table.appendChild(new_tbody);
+            querySnapshot.forEach((doc) => {
+                // doc.data() is never undefined for query doc snapshots
+                console.log(doc.data())
+                new_tbody.innerHTML +=
+                    '<tr id = "' + doc.id + '" class= "table-rows">\
+                    <td colspan="2">' + doc.data().menu_name + '</td>\
+                    <td>' + doc.data().last_edited + '</td>\
+                    <td>\
+                    <div class="actions">\
+                    <i id="edit-menu-' + doc.id + '" class="far fa-edit edit-menu-btns"></i>\
+                    <i id="delete-menu-' + doc.id + '" class="far fa-trash-alt del-menu-btns"></i>\
+                    </div></td></tr>';
+            });
 
-// Edit button takes you to main tool page and loads the html
+            let edit_btns = document.getElementsByClassName('edit-menu-btns');
+            let del_btns = document.getElementsByClassName('del-menu-btns');
 
-let editmenu1 = document.getElementById('edit-menu-1');
-var htmltext = ""
-var htmltext2 = ""
-var htmllegit = ""
-editmenu1.onclick = function(){
-    // testing from known data
-    db.collection('menus').doc('U2QjY28DGV6FYOHGPSXS')
-    .onSnapshot(function(c){
-        conv = (c.data().html);
+            for (let button of del_btns) {
+                // Delete button deletes each menu from profile for each menu created.
+                let tar = document.getElementById(button.id.split('-')[2]);
+                button.onclick = function () {
+                    db.collection("menus").doc(button.id.split('-')[2]).delete().then(() => {
+                        console.log("Document successfully deleted!");
+                        tar.remove();
+                    }).catch((error) => {
+                        console.error("Error removing document: ", error);
+                    });
+                }
+            }
 
-        htmltext = JSON.stringify(conv)
-        htmltext2 = conv.replace(/(\r\n|\n|\r)/gm, "");
-        htmllegit = htmltext2.toString();
-        console.log(htmltext);
-        console.log(htmltext2);
-        console.log(htmllegit);
-        
-        window.location= './main_tool.html?htmltexts=' + htmllegit;
-    })
-
+            for (let button of edit_btns) {
+                button.onclick = function () {
+                    window.location = "./main_tool.html?id=" + button.id.split('-')[2];
+                }
+            }
+        })
+        .catch((error) => {
+            console.log("Error getting documents: ", error);
+        });
 }
